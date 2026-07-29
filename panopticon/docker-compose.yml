@@ -1,0 +1,28 @@
+services:
+  panopticon:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PANOPTICON_PROFILE=standard
+      - DATABASE_URL=sqlite+aiosqlite:///./data/panopticon.db
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    profiles:
+      - redis
+
+  nexus-v:
+    build:
+      context: ./nexus-v
+    ports:
+      - "5173:5173"
+    depends_on:
+      - panopticon
+    profiles:
+      - frontend
