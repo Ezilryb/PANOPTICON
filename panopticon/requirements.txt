@@ -1,0 +1,7 @@
+# panopticon/requirements.txt
+# Dépendances minimales de DAEMON : lecture des ressources systeme (psutil) et
+# détection GPU NVIDIA optionnelle (pynvml). Aucune dépendance de module métier
+# n'est incluse ici : aucun outil de vision n'est codé à ce stade.
+
+psutil>=5.9
+nvidia-ml-py>=12.0  # fournit le module `pynvml`, sans le warning de dépréciation du paquet `pynvml` seul
