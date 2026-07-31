@@ -1,0 +1,51 @@
+2026-07-31 11:18:46,893 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 11:18:46,893 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T11:18:46.893922
+2026-07-31 11:18:46,895 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 11:20:08,510 [WARNING] daemon: Module inconnu : <ARGUS>
+2026-07-31 15:13:06,353 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 15:13:06,355 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T15:13:06.355019
+2026-07-31 15:13:06,356 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 15:13:24,514 [WARNING] daemon: Module inconnu : <ARGUS>
+2026-07-31 15:13:38,156 [INFO] daemon: stop_all() exécuté
+2026-07-31 15:13:38,157 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
+2026-07-31 16:07:59,192 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:07:59,192 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:07:59.192707
+2026-07-31 16:07:59,193 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:08:18,556 [WARNING] daemon: Module inconnu : <ARGUS>
+2026-07-31 16:08:42,020 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:08:51,102 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:08:51,102 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
+2026-07-31 16:11:37,837 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:11:37,838 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:11:37.838052
+2026-07-31 16:11:37,838 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:11:50,216 [WARNING] daemon: Refus de démarrage (ressources insuffisantes) : ARGUS -> RAM insuffisante pour ARGUS : 1500 Mo requis, 1039 Mo disponibles
+2026-07-31 16:12:20,586 [WARNING] daemon: Refus de démarrage (ressources insuffisantes) : ARGUS -> RAM insuffisante pour ARGUS : 1500 Mo requis, 1024 Mo disponibles
+2026-07-31 16:14:01,181 [INFO] daemon: ARGUS démarré (PID 12376) — Ressources suffisantes
+2026-07-31 16:19:18,069 [INFO] killswitch: Signal reçu : SIGINT — déclenchement de l'arrêt d'urgence
+2026-07-31 16:19:18,070 [INFO] daemon: Arrêt de ARGUS (PID 12376)
+2026-07-31 16:19:18,072 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:19:18,073 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
+2026-07-31 16:19:42,448 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:19:42,448 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:19:42.448492
+2026-07-31 16:19:42,448 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:19:54,708 [WARNING] daemon: Refus de démarrage (ressources insuffisantes) : ARGUS -> RAM insuffisante pour ARGUS : 1500 Mo requis, 1237 Mo disponibles
+2026-07-31 16:20:37,196 [WARNING] daemon: Refus de démarrage (ressources insuffisantes) : ARGUS -> RAM insuffisante pour ARGUS : 1500 Mo requis, 1221 Mo disponibles
+2026-07-31 16:20:42,482 [INFO] killswitch: Signal reçu : SIGINT — déclenchement de l'arrêt d'urgence
+2026-07-31 16:20:42,483 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:20:42,484 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
+2026-07-31 16:21:07,967 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:21:07,967 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:21:07.967496
+2026-07-31 16:21:07,967 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:21:17,584 [ERROR] daemon: Échec du lancement de ARGUS : [WinError 2] Le fichier spécifié est introuvable
+2026-07-31 16:25:46,362 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:25:46,363 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
+2026-07-31 16:27:57,458 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:27:57,459 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:27:57.459111
+2026-07-31 16:27:57,459 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:28:20,133 [INFO] daemon: ARGUS démarré (PID 20684) — Ressources suffisantes
+2026-07-31 16:35:38,555 [INFO] daemon: Arrêt de ARGUS (PID 20684)
+2026-07-31 16:35:38,570 [INFO] daemon: stop_all() exécuté
+2026-07-31 16:39:41,990 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 16:39:41,990 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T16:39:41.990762
+2026-07-31 16:39:41,991 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 16:39:50,277 [INFO] daemon: ARGUS démarré (PID 20316) — Ressources suffisantes
