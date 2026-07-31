@@ -1,0 +1,10 @@
+2026-07-31 11:18:46,893 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 11:18:46,893 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T11:18:46.893922
+2026-07-31 11:18:46,895 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 11:20:08,510 [WARNING] daemon: Module inconnu : <ARGUS>
+2026-07-31 15:13:06,353 [INFO] daemon: DAEMON initialisé avec 9 module(s) enregistré(s)
+2026-07-31 15:13:06,355 [INFO] panopticon: PANOPTICON démarré à 2026-07-31T15:13:06.355019
+2026-07-31 15:13:06,356 [INFO] killswitch: Killswitch armé (SIGINT/SIGTERM)
+2026-07-31 15:13:24,514 [WARNING] daemon: Module inconnu : <ARGUS>
+2026-07-31 15:13:38,156 [INFO] daemon: stop_all() exécuté
+2026-07-31 15:13:38,157 [INFO] killswitch: Arrêt complet de PANOPTICON effectué
