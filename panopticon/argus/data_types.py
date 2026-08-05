@@ -1,5 +1,5 @@
 """
-panopticon/argus/types.py
+panopticon/argus/data_types.py
 
 Types de données partagés par tout ARGUS : une frame capturée, une détection
 individuelle, et l'évènement complet (frame + détections) publié vers les

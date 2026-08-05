@@ -44,14 +44,14 @@ class SharedFrameStore:
     """
     Écrivain (côté ARGUS) : un fichier par caméra, réécrit de façon atomique
     à chaque `write()`. Les paramètres slot_size_bytes/slots sont conservés
-    pour compatibilité d'API mais ne sont plus utilisés (un seul fichier
-    "dernière frame" suffit, l'écriture atomique élimine le besoin de
-    ring buffer pour éviter les lectures partielles).
+    pour compatibilité d'API ; slot_size_bytes sert de borne maximale : une
+    frame encodée plus volumineuse est ignorée (logged) plutôt qu'écrite,
+    ce qui correspond au contrat attendu par FrameReader et les tests.
     """
 
     def __init__(self, camera_id: str, slot_size_bytes: int = 2_000_000, slots: int = 3) -> None:
         self.camera_id = camera_id
-        self.slot_size = slot_size_bytes  # conservé pour compat API, non utilisé
+        self.slot_size = slot_size_bytes  # borne maximale de taille de payload JPEG accepté
         self._version = 0
 
         _FRAME_CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -69,6 +69,17 @@ class SharedFrameStore:
             logger.warning("Caméra %s : échec de l'encodage JPEG pour frame_id=%d", self.camera_id, frame_id)
             return
         payload = encoded.tobytes()
+
+        # --- CORRECTIF : vérification de taille manquante dans la version précédente ---
+        # Une frame trop grande pour le slot configuré est ignorée (et loguée) plutôt
+        # qu'écrite quand même, ce qui respectait l'API slot_size_bytes déclarée et
+        # fait passer test_oversized_frame_is_ignored_not_crashed.
+        if len(payload) > self.slot_size:
+            logger.warning(
+                "Caméra %s : frame trop volumineuse pour le slot configuré (%d > %d octets), frame ignorée",
+                self.camera_id, len(payload), self.slot_size,
+            )
+            return
 
         self._version += 1
         header = struct.pack(_HEADER_FMT, self._version, frame_id, ts_capture, image.shape[1], image.shape[0], len(payload))
