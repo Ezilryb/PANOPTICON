@@ -1,0 +1,34 @@
+# panopticon/requirements.txt
+# Dépendances de DAEMON : lecture des ressources systeme (psutil) et détection
+# GPU NVIDIA optionnelle (pynvml). Dépendances d'ARGUS : capture/encodage
+# vidéo (OpenCV) et détection d'objets (Ultralytics YOLO, backend "yolo"
+# seulement). Dépendances de ROSTER : reconnaissance faciale (face_recognition/
+# dlib, backend "face_recognition" seulement — le backend "mock" par défaut
+# n'a besoin que d'OpenCV, déjà présent pour ARGUS). Dépendances d'ORACLE :
+# appel HTTP vers l'API de recherche d'image (backend "google_vision"
+# seulement — le backend "mock" par défaut n'a besoin que d'OpenCV/NumPy,
+# déjà présents pour ARGUS ; aucune dépendance ajoutée pour le hash perceptuel,
+# implémenté à la main dans oracle/phash.py).
+
+psutil>=5.9
+nvidia-ml-py>=12.0        # fournit le module `pynvml`, sans le warning de dépréciation du paquet `pynvml` seul
+
+# --- ARGUS ---
+opencv-python-headless>=4.9   # capture caméra (RTSP/USB/fichier), encodage/décodage JPEG du frame store
+numpy>=1.26                    # tableaux image, calculs bbox/IoU
+ultralytics>=8.3                # backend de détection "yolo" (optionnel : non requis si backend="mock")
+# opencv-contrib-python-headless>=4.9
+#   REMPLACE la ligne opencv-python-headless ci-dessus (même module `cv2` — ne jamais installer
+#   les deux en même temps). Nécessaire uniquement pour tracking_mode.light_tracker_backend="mosse"
+#   (cf. argus/light_tracker.py). Le backend par défaut "optical_flow" n'a besoin de rien de plus.
+
+# --- ROSTER ---
+face_recognition>=1.3            # backend de reconnaissance faciale "face_recognition" (optionnel : non
+                                   # requis si backend="mock"). Nécessite dlib (compilation native, voir
+                                   # https://github.com/ageitgey/face_recognition#installation pour les
+                                   # prérequis systèmes selon la plateforme).
+
+# --- ORACLE ---
+requests>=2.31                   # backend d'identification "google_vision" (optionnel : non requis si
+                                   # backend="mock"). Appel REST direct à l'API Vision — volontairement pas
+                                   # le SDK `google-cloud-vision` complet, inutilement lourd pour ce seul usage.
