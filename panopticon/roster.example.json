@@ -1,0 +1,23 @@
+{
+  "data_dir": "roster_data",
+  "embedder": {
+    "backend": "mock",
+    "model": "hog",
+    "upsample_times": 1,
+    "num_jitters": 1
+  },
+  "matcher": {
+    "distance_threshold": 0.6,
+    "min_face_size_px": 20
+  },
+  "argus": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "publisher": {
+    "host": "127.0.0.1",
+    "port": 8766
+  },
+  "person_classes": ["person"],
+  "log_stats_every_s": 10.0
+}

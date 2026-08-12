@@ -1,0 +1,38 @@
+{
+  "enhancer": {
+    "backend": "classic",
+    "low_light_threshold": 90.0,
+    "target_brightness": 120.0,
+    "gamma_min": 0.3,
+    "gamma_max": 2.5,
+    "clahe_clip_limit": 2.5,
+    "clahe_tile_grid_size": 8,
+    "low_contrast_threshold": 35.0,
+    "white_balance_enabled": true,
+    "color_cast_threshold": 8.0,
+    "denoise_enabled": true,
+    "denoise_bilateral_d": 5,
+    "denoise_bilateral_sigma_color": 50.0,
+    "denoise_bilateral_sigma_space": 50.0
+  },
+  "argus": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "publisher": {
+    "host": "127.0.0.1",
+    "port": 8767,
+    "jpeg_quality": 85,
+    "frame_shm_slots": 3
+  },
+  "screen_regions": [
+    {
+      "camera_id": "ENTREE",
+      "region_name": "moniteur-accueil",
+      "bbox": [420, 80, 620, 260],
+      "on_brightness_threshold": 60.0,
+      "motion_threshold": 6.0
+    }
+  ],
+  "log_stats_every_s": 10.0
+}

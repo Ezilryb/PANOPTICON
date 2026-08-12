@@ -1,0 +1,35 @@
+{
+  "analyzer": {
+    "backend": "mock",
+    "pose_weights": "yolo11n-pose.pt",
+    "device": "auto",
+    "keypoint_confidence_threshold": 0.5,
+    "lying_aspect_ratio_threshold": 1.3,
+    "upright_aspect_ratio_threshold": 0.8,
+    "lying_angle_threshold_deg": 55.0,
+    "upright_angle_threshold_deg": 30.0
+  },
+  "fall_detection": {
+    "confirm_seconds": 5.0,
+    "fast_confirm_seconds": 2.0,
+    "recovery_confirm_seconds": 2.0,
+    "track_lost_after_s": 12.0,
+    "min_detection_confidence": 0.4,
+    "motion_window_s": 6.0,
+    "fall_detection_window_s": 1.5,
+    "fall_min_vertical_px": 60.0,
+    "fall_trigger_grace_s": 3.0,
+    "max_movement_px": 40.0,
+    "monitored_camera_ids": [],
+    "person_classes": ["person"]
+  },
+  "argus": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "publisher": {
+    "host": "127.0.0.1",
+    "port": 8770
+  },
+  "log_stats_every_s": 10.0
+}
